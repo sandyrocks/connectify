@@ -1,0 +1,24 @@
+%nav.navbar.navbar-inverse
+  .container
+    .navbar-header
+      .navbar-brand
+        = link_to "Connectify", "#{Rails.root}"
+    .navbar-collapse
+      %ul.nav.navbar-nav
+        %li.active
+          %a.href{"data-target" => ".bs-example-modal-sm", "data-toggle" => "modal", :type => "button"} Sign-up
+          .modal.fade.bs-example-modal-sm{"aria-hidden" => "true", "aria-labelledby" => "mySmallModalLabel", :role => "dialog", :tabindex => "-1"}
+            .modal-dialog.modal-sm
+              .modal-content
+                = render file: "devise/registrations/new"
+        %li.active
+          %a.href{"data-target" => ".bs-example-signinmodal-sm", "data-toggle" => "modal", :type => "button"} Sign-in
+          .modal.fade.bs-example-signinmodal-sm{"aria-hidden" => "true", "aria-labelledby" => "mySmallModalLabel", :role => "dialog", :tabindex => "-1"}
+            .modal-dialog.modal-sm
+              .modal-content
+                = render file: "devise/sessions/new"
+        
+
+
+
+

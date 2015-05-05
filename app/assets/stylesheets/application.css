@@ -13,3 +13,5 @@
  *= require_tree .
  *= require_self
  */
+
+.modal-content { padding: 12px;}
