@@ -8,6 +8,9 @@
     = csrf_meta_tags
   %body
     = render "layouts/header"
+    - alert_class = (flash[:alert])? "alert alert-danger" : "alet alert-success"
+    %div.col-xs-12{:class => alert_class }
+      =flash[:notice]
     = yield
     = render "layouts/footer"
     - if current_user

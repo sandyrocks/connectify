@@ -1,0 +1,29 @@
+.container
+  .row
+    .col-md-4
+      =simple_form_for @profiles do |f|
+        .form-group
+          = f.input :first_name, label_html: {class: 'control-label'}, input_html: { class: 'form-control'}
+        .form-group
+          = f.input :last_name, input_html: { class: 'form-control'}, input_html: { class: 'form-control'}
+        .form-group
+          = f.input :age, input_html: { class: 'form-control'}, input_html: { class: 'form-control'}
+        .form-group
+          = f.input :city, input_html: { class: 'form-control'}, input_html: { class: 'form-control'}
+        .form-group
+          = f.input :state, input_html: { class: 'form-control'}, input_html: { class: 'form-control'}
+        .form-group
+          = f.input :country, input_html: { class: 'form-control'}, input_html: { class: 'form-control'}, as: :select, collection: ['India', 'Ireland', 'Nepal', 'Taiwan', 'Singapor']
+        .form-group
+          = f.input :mobile_number, input_html: { class: 'form-control'}, input_html: { class: 'form-control'}
+        .form-group
+          = f.button :submit, class: 'btn btn-primary btn-success'
+        
+
+
+
+
+
+
+
+

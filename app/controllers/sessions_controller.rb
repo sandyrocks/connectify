@@ -1,5 +1,5 @@
 class SessionsController < Devise::SessionsController
-	
+  
   def create
     resource = warden.authenticate!(:scope => resource_name, :recall => "#{controller_path}#new")
     if is_navigational_format?
